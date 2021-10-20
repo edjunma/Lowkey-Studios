@@ -1,6 +1,7 @@
-# Light-dark mode project
+# Light-dark mode Studio Landing Page project
 
-These are the corresponding files for my three-part video series on creating your own custom light-dark mode theme with CSS variables and a little JavaScript.
+Studio Landing page with light-dark mode functionality and responsiveness.
 
-## Helpful Links
+## Credits to Coding in Public
+
 - Live example: https://codinginpublic.dev/projects/light-dark/

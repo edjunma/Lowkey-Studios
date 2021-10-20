@@ -31,9 +31,41 @@ button {
 	--accent1: hsl(175, 100%, 31%);
 	--accent2: hsl(21, 84%, 56%);
 	--accent3: hsl(40, 89%, 65%);
-	--bkg1: ;
-	--bk2: ;
-	--shadow: ;
+	--bkg1: hsl(0, 0%, 100%);
+	--bk2: hsl(26, 37%, 96%);
+	--shadow: 20px 20px 50px hsl(255, 36%, 17%, 0.35), -30px -30px 50px hsl(26, 37%, 96%, 0.15);
+
+	--text-dark: hsl(217, 54.2%, 88%);
+	--accent1-dark: hsl(175, 100%, 31%);
+	--accent2-dark: hsl(21, 84%, 56%);
+	--accent3-dark: hsl(40, 89%, 65%);
+	--bkg1-dark: hsl(218, 15.4%, 10.2%);
+	--bk2-dark: hsl(218, 14.7%, 18.7%);
+	--shadow-dark: 20px 20px 50px hsl(255, 36%, 17%, 0.35), -30px -30px 50px hsl(26, 37%, 96%, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text: var(--text-dark);
+		--accent1: var(--accent1-dark);
+		--accent2: var(--accent2-dark);
+		--accent3: var(--accent3-dark);
+		--bkg1: var(--bkg1-dark);
+		--bkg2: var(--bkg2-dark);
+		--shadow: var(--shadow-dark);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--text: var(--text-light);
+		--accent1: var(--accent1-light);
+		--accent2: var(--accent2-light);
+		--accent3: var(--accent3-light);
+		--bkg1: var(--bkg1-light);
+		--bkg2: var(--bkg2-light);
+		--shadow: var(--shadow-light);
+	}
 }
 
 /* utility classes */
@@ -60,18 +92,18 @@ button {
 	fill: var(--accent3);
 }
 .bkg1 {
-	color: hsl(0, 0%, 100%);
+	color: var(--bkg1);
 }
 .bkg2 {
-	color: hsl(26, 37%, 96%);
+	color: var(--bk2);
 }
 
 .bkg2--stroke {
-	stroke: hsl(26, 37%, 96%);
+	stroke: var(--bk2);
 }
 
 .bkg2--fill {
-	fill: hsl(26, 37%, 96%);
+	fill: var(--bk2);
 }
 
 /* link color */
@@ -88,10 +120,10 @@ button {
 	color: var(--accent3);
 }
 .bkg1-link {
-	color: hsl(0, 0%, 100%);
+	color: var(--bkg1);
 }
 .bkg2-link {
-	color: hsl(26, 37%, 96%);
+	color: var(--bk2);
 }
 
 /* background color */
@@ -109,10 +141,10 @@ button {
 	background-color: var(--accent3);
 }
 .bkg1-bg {
-	background-color: hsl(0, 0%, 100%);
+	background-color: var(--bkg1);
 }
 .bkg2-bg {
-	background-color: hsl(26, 37%, 96%);
+	background-color: var(--bk2);
 }
 
 /* text sizing */
@@ -159,14 +191,14 @@ nav {
 
 .nav-logo {
 	width: clamp(160px, 69.2307695px + 23.076923vw, 300px);
-	background-color: hsl(0, 0%, 100%);
+	background-color: var(--bkg1);
 	position: relative;
 }
 
 body {
 	font-family: 'Inter', sans-serif;
 	color: var(var(--text));
-	background-color: hsl(0, 0%, 100%);
+	background-color: var(--bkg1);
 }
 
 main {
@@ -280,7 +312,7 @@ header {
 .meet-img__teacher {
 	width: 100%;
 	grid-area: 1/2/3/4;
-	box-shadow: 20px 20px 50px hsl(255, 36%, 17%, 0.35), -30px -30px 50px hsl(26, 37%, 96%, 0.15);
+	box-shadow: var(--shadow);
 }
 
 .btn-connect {
@@ -344,7 +376,7 @@ header {
 	transform: translate(-50%, -50%);
 	padding: 1rem;
 	border-radius: 50%;
-	border: 8px solid hsl(0, 0%, 100%);
+	border: 8px solid var(--bkg1);
 	line-height: 0.75;
 	font-size: clamp(1.3rem, 0.47272731rem + 3.781818vw, 2.6rem);
 	width: clamp(4rem, 2.72727269rem + 5.818182vw, 6rem);
@@ -376,7 +408,7 @@ header {
 .connect-form {
 	max-width: 500px;
 	position: relative;
-	border: 12px solid hsl(0, 0%, 100%);
+	border: 12px solid var(--bkg1);
 	border-radius: 10px;
 	padding: 1.5rem 3rem;
 	margin: -6rem auto 0;
@@ -391,15 +423,15 @@ header {
 
 [type='email'] {
 	padding: 0.5rem;
-	border: 3px solid hsl(26, 37%, 96%);
+	border: 3px solid var(--bk2);
 }
 
 [type='submit'] {
 	padding: 0.5rem 1rem;
-	border: 3px solid hsl(26, 37%, 96%);
+	border: 3px solid var(--bk2);
 	border-radius: 0;
 	color: var(var(--text));
-	background-color: hsl(26, 37%, 96%);
+	background-color: var(--bk2);
 	margin-left: -5px;
 	cursor: pointer;
 }
@@ -443,7 +475,7 @@ footer div {
 	[type='submit'] {
 		margin: 0;
 		width: 100%;
-		background-color: hsl(26, 37%, 96%);
+		background-color: var(--bk2);
 	}
 }
 
